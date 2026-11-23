@@ -1,0 +1,38 @@
+/* Chapter 11: Calorie Counter */
+body{max-width:1200px;margin:0 auto;border:1px solid #777}
+.calorie-page{display:flex;flex-direction:row;align-items:flex-start;gap:2.5%;width:100%;padding:1em 2.5%}
+.calorie-content{flex:1 1 64%;min-width:0}
+.calorie-page .resources{flex:0 0 34%;width:34%;min-width:0;padding:1.1em 1.2em;border:2px solid steelblue;border-radius:23px}
+.calorie-page .resources h2{color:maroon;font-size:1.5em}
+.calorie-content h1{margin:.2em 0 .25em;text-align:center;font-size:1.8em;color:maroon}
+.calorie-table{width:100%;border:2px solid #111;border-collapse:separate;border-spacing:0;font-size:.94em;background:#fff}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.calorie-table th,.calorie-table td{border:0;padding:.24em .65em;text-align:left;vertical-align:top}
+.calorie-table thead{background:steelblue;color:#fff}
+.calorie-table thead th{padding:.3em .65em;white-space:nowrap}
+.calorie-table .category{width:19%;font-weight:bold}
+.calorie-table .food{width:40%;font-weight:normal}
+.calorie-table .serving{width:26%;white-space:nowrap}
+.calorie-table .calories,.calorie-table thead th:last-child{text-align:right;white-space:nowrap}
+@media screen and (max-width:800px){
+ .calorie-page{flex-direction:column}
+ .calorie-content,.calorie-page .resources{width:100%;flex:auto}
+ .calorie-page .resources{margin-top:1em}
+}
+@media screen and (max-width:639px){
+ body{width:100%;border:0}
+ .calorie-page{display:block;padding:1em 5%}
+ .calorie-content h1{font-size:1.7em;margin:0 0 .25em}
+ .calorie-table{display:block;width:100%;border:2px solid #111;font-size:1em}
+ .calorie-table thead{display:none}
+ .calorie-table tbody{display:block}
+ .calorie-table tr{display:block}
+ .calorie-table th,.calorie-table td{display:block;width:auto;border:0;padding:.12em .65em;text-align:left;white-space:normal}
+ .calorie-table .category{display:block;width:100%;background:steelblue;color:white;font-weight:bold;padding:.2em .65em;margin:0}
+ .calorie-table .food{font-weight:bold;padding-top:.4em}
+ .calorie-table .serving{white-space:normal}
+ .calorie-table .calories{text-align:left;padding-bottom:.35em}
+ .calorie-table .calories::after{content:" calories"}
+ .calorie-page .resources{margin-top:1.5em}
+ .calorie-page .resources h2{font-size:1.4em}
+}
